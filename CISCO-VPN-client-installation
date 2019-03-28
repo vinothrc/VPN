@@ -1,0 +1,12 @@
+#Install CISCO-VPN client in Ubuntu 16.04 & 18.04
+#Open terminal (Ctrl+Alt+T)
+sudo apt-get update
+sudo apt-get install network-manager-openconnect
+sudo apt install libpangox-1.0-0
+sudo apt-get install lib32z1 lib32ncurses5
+cd ~ && mkdir ciscovpn
+cd ciscovpn && wget http://www.isthe.com/for-you-only/anyconnect/anyconnect-linux64-4.6.03049-predeploy-k9.tar.gz
+tar -xzvf anyconnect-linux64-4.6.03049-predeploy-k9.tar.gz
+cd anyconnect-linux64-4.6.03049/vpn/
+sudo ./vpn_install.sh
+sudo systemctl daemon-reload
